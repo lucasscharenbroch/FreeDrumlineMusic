@@ -15,14 +15,20 @@ header {
 }
 
 nav {
+    width: 10px;
     height: 100%;
     flex-grow: 10;
 }
 
-.logo {
+.logo-link {
     flex-grow: 1;
     height: 100%;
 }
+
+.logo {
+    height: 100%;
+}
+
 
 .header-icon {
     height: 70%;
