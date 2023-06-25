@@ -145,3 +145,36 @@ iframe {
     height: 70vh;
     width: 100%;
 }
+
+@media (orientation: portrait) {
+    #left-pannel, #right-pannel {
+        flex-basis: 10%;
+    }
+
+    #main-pannel {
+        flex-basis: 80%;
+    }
+
+    .header-icon {
+        display: none;
+    }
+
+    header {
+        height: 5vh;
+    }
+
+    .bg-img {
+        position: fixed;
+        z-index: -5;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 40px
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
