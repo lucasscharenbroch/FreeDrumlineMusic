@@ -6,6 +6,7 @@ header {
     background-color: DimGray;
     border: 5px solid black;
     height: 20vh;
+    width: 100vh;
     display: flex;
 }
 
