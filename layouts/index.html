@@ -1,0 +1,33 @@
+{{ define "main" }}
+<aside id = "left-pannel"></aside>
+<section id = "main-pannel">
+    <div>
+        <h1>{{.Title}}</h1>
+        {{.Content}}
+        <br>
+        <section id="cadence-canvas">
+            {{ $featured := .Params.featured }}
+            {{ range .Site.AllPages }}
+                {{ if in $featured .Title }}
+                    {{if .Params.level}}
+                        {{ partial "cadence-button" . }}
+                    {{ else }}
+                        {{ partial "tag-button" . }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </section>
+        <br>
+        {{ $cadences := where .Site.RegularPages "Section" "cadences" }}
+        {{ $warmups := where .Site.RegularPages "Section" "warmups" }}
+        {{ $trashline := where .Site.RegularPages "Section" "trashline" }}
+        {{ $other := where .Site.RegularPages "Section" "other" }}
+        <h1><strong>{{ len $cadences }}</strong> Drumline Cadences</h1>
+        <h1><strong>{{ len $warmups }}</strong> Drumline Warmups</h1>
+        <h1><strong>{{ len $trashline }}</strong> Trashline Cadences</h1>
+        <h1><strong>{{ len $other }}</strong> Other Compositions</h1>
+        <h2>and counting</h2>
+    </div>
+</section>
+<aside id = "right-pannel"></aside>
+{{ end }}

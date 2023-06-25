@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/Favicon.ico" />
+        <link rel="stylesheet" href="/style.css"/>
+    </head>
+    <body>
+        {{ block "banner" . }}
+        <img src="/images/banner{{with .Params.banner }}{{.}}{{else}}1{{end}}.jpg"
+             class="bg-img"/>
+        {{ end }}
+        <header>
+            {{ partial "header" . }}
+        </header>
+        <main>
+            {{ block "main" . }}
+            {{ end }}
+        </main>
+    </body>
+</html>

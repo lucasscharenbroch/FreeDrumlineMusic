@@ -1,0 +1,18 @@
+{{ define "main" }}
+<aside id="left-pannel"></aside>
+<section id="main-pannel">
+    <div>
+        <h1>{{.Title}}</h1>
+        <br>
+        <section id="cadence-canvas">
+            {{ range .Pages }}
+                {{ $lv := .Params.level }}
+                {{ $subdir := .Parent.Params.subdir }}
+                {{ partial "cadence-button" . }}
+            {{ end }}
+        </section>
+        {{.Content}}
+    </div>
+</section>
+<aside id="right-pannel"></aside>
+{{ end }}

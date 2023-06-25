@@ -1,0 +1,11 @@
+{{ define "main" }}
+<aside id = "left-pannel"></aside>
+<section id = "main-pannel">
+    <audio controls>
+        <source src="/{{.Parent.Params.subdir}}/audio/{{.Params.id}}.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <iframe src="/{{.Parent.Params.subdir}}/pdf/{{.Params.id}}.pdf" id="pdfViewer"></iframe>
+</section>
+<aside id = "right-pannel"></aside>
+{{ end }}
