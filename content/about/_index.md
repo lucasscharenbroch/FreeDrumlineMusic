@@ -15,7 +15,7 @@ banner: 2
 
 {{< br >}}
 
-### FreeDrumlineMusic.net is the project of Lucas S, a proud alumnus of the SHS drumline. The website, copositions, arrangements were created by Lucas for use by the SHS drumline and other drumline alike.
+### FreeDrumlineMusic.net is the project of Lucas S, a proud alumnus of the SHS drumline. The website, compositions, and transcriptions were created by Lucas for use by the SHS drumline and other drumline alike.
 
 {{< br >}}
 
